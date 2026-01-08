@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #1e3a8a; /* Deep maritime blue - blue-800 */
+    --color-primary-50: #eff6ff; /* Very light blue - blue-50 */
+    --color-primary-100: #dbeafe; /* Light blue - blue-100 */
+    --color-primary-500: #3b82f6; /* Medium blue - blue-500 */
+    --color-primary-600: #2563eb; /* Darker blue - blue-600 */
+    --color-primary-700: #1d4ed8; /* Dark blue - blue-700 */
+    --color-primary-900: #1e3a8a; /* Deep maritime blue - blue-900 */
+
+    /* Secondary Colors */
+    --color-secondary: #3b82f6; /* Lighter ocean blue - blue-500 */
+    --color-secondary-50: #eff6ff; /* Very light blue - blue-50 */
+    --color-secondary-100: #dbeafe; /* Light blue - blue-100 */
+    --color-secondary-200: #bfdbfe; /* Light blue - blue-200 */
+    --color-secondary-300: #93c5fd; /* Medium light blue - blue-300 */
+    --color-secondary-400: #60a5fa; /* Medium blue - blue-400 */
+    --color-secondary-600: #2563eb; /* Darker blue - blue-600 */
+
+    /* Accent Colors */
+    --color-accent: #ea580c; /* Shipping industry orange - orange-600 */
+    --color-accent-50: #fff7ed; /* Very light orange - orange-50 */
+    --color-accent-100: #ffedd5; /* Light orange - orange-100 */
+    --color-accent-200: #fed7aa; /* Light orange - orange-200 */
+    --color-accent-500: #f97316; /* Medium orange - orange-500 */
+    --color-accent-700: #c2410c; /* Dark orange - orange-700 */
+
+    /* Background Colors */
+    --color-background: #f8fafc; /* Soft neutral - slate-50 */
+    --color-surface: #ffffff; /* Pure white - white */
+    --color-surface-50: #f8fafc; /* Very light gray - slate-50 */
+    --color-surface-100: #f1f5f9; /* Light gray - slate-100 */
+    --color-surface-200: #e2e8f0; /* Light gray - slate-200 */
+
+    /* Text Colors */
+    --color-text-primary: #1f2937; /* Near-black - gray-800 */
+    --color-text-secondary: #6b7280; /* Medium gray - gray-500 */
+    --color-text-tertiary: #9ca3af; /* Light gray - gray-400 */
+    --color-text-inverse: #ffffff; /* White text - white */
+
+    /* Status Colors */
+    --color-success: #059669; /* Professional green - emerald-600 */
+    --color-success-50: #ecfdf5; /* Very light green - emerald-50 */
+    --color-success-100: #d1fae5; /* Light green - emerald-100 */
+    --color-success-500: #10b981; /* Medium green - emerald-500 */
+    --color-success-700: #047857; /* Dark green - emerald-700 */
+
+    --color-warning: #d97706; /* Amber for caution - amber-600 */
+    --color-warning-50: #fffbeb; /* Very light amber - amber-50 */
+    --color-warning-100: #fef3c7; /* Light amber - amber-100 */
+    --color-warning-500: #f59e0b; /* Medium amber - amber-500 */
+    --color-warning-700: #b45309; /* Dark amber - amber-700 */
+
+    --color-error: #dc2626; /* Clear red for critical - red-600 */
+    --color-error-50: #fef2f2; /* Very light red - red-50 */
+    --color-error-100: #fee2e2; /* Light red - red-100 */
+    --color-error-500: #ef4444; /* Medium red - red-500 */
+    --color-error-700: #b91c1c; /* Dark red - red-700 */
+
+    /* Border Colors */
+    --color-border: #e5e7eb; /* Light border - gray-200 */
+    --color-border-light: #f3f4f6; /* Very light border - gray-100 */
+    --color-border-dark: #d1d5db; /* Medium border - gray-300 */
+
+    /* Shadow Colors */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-text-primary font-sans;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors duration-200;
+  }
+.btn-secondary  {
+    @apply bg-secondary text-white hover:bg-secondary-600 focus:ring-2 focus:ring-offset-2 transition-colors duration-200;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-white hover:bg-accent-700 focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-surface border border-border rounded-lg shadow-sm;
+  }
+
+  .status-success {
+    @apply bg-success-50 text-success-700 border-success-100;
+  }
+
+  .status-warning {
+    @apply bg-warning-50 text-warning-700 border-warning-100;
+  }
+
+  .status-error {
+    @apply bg-error-50 text-error-700 border-error-100;
+  }
+
+  .nav-item {
+    @apply px-4 py-2 text-sm font-medium text-text-secondary hover:text-primary hover:bg-primary-50 rounded-md transition-all duration-150;
+  }
+
+  .nav-item-active {
+    @apply bg-primary text-white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .transition-smooth {
+    transition: all 200ms ease-out;
+  }
+
+  .transition-medium {
+    transition: all 300ms ease-out;
+  }
+
+  .hover-lift {
+    @apply hover:shadow-md hover:-translate-y-0.5 transition-all duration-200;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+
+  .data-density-compact {
+    @apply text-xs leading-tight;
+  }
+
+  .data-density-comfortable {
+    @apply text-sm leading-relaxed;
+  }
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { 
+    opacity: 0; 
+    transform: translateY(-10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 200ms ease-out;
+}
+
+.animate-slide-down {
+  animation: slideDown 300ms ease-out;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s infinite;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
