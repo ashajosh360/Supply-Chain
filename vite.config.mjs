@@ -9,13 +9,13 @@ export default defineConfig({
   // comment this out if that isn't relevant for your project
   build: {
     outDir: "build",
-    chunkSizeWarningLimit: 2000,
+    chunkSizeWarningLimit: 5000,
   },
   plugins: [tsconfigPaths(), react(), tagger()],
   server: {
     port: "4028",
     host: "0.0.0.0",
     strictPort: true,
-    allowedHosts: ['.amazonaws.com', '.builtwithrocket.new']
+    //allowedHosts: ['.amazonaws.com', '.builtwithrocket.new']
   }
 });
